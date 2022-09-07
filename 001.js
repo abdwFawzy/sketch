@@ -1,8 +1,9 @@
-const N = 64;
-let wide = 960 / N;
+const range = document.querySelector('#grid').value;
+const main = document.querySelector('main');
+const N = range;
+let wide = 330 / N;
 const container = document.createElement('div')
-const main = document.querySelector('main')
-let mouseDown = false
+let mouseDown = false;
 document.body.onmousedown = () => (mouseDown = true)
 document.body.onmouseup = () => (mouseDown = false)
 
@@ -23,9 +24,5 @@ for (let i = 0; i < N; i++) {
             }
             
         })
-        
-
-        
     }
-    
 }

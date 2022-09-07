@@ -2,11 +2,16 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-flow: row wrap;
+}
+h1{
+    display: flex;
+    justify-content: center;
 }
 .container{
-    width: 960px;
+    width: 330px;
     display: flex;
-    height: 550px;
+    height: 330px;
     flex-wrap: wrap;
 }  
 .cupe{   
