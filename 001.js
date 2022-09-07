@@ -18,7 +18,15 @@ for (let i = 0; i < N; i++) {
         cupe.classList.add("cupe");
         cupe.style.width = `${wide}px`;
         cupe.style.height = `${wide}px`;    
+        cupe.style.border = '1px solid black';
         container.appendChild(cupe)
+        cupe.addEventListener('mouseover', e => {
+            if(mouseDown)
+            {
+                cupe.classList.add('black')
+            }
+            
+        })
         eraser.addEventListener('click', () => {
             cupe.addEventListener('mouseover', e => {
                 if(mouseDown)

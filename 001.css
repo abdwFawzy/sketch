@@ -13,6 +13,7 @@ h1{
     display: flex;
     height: 330px;
     flex-wrap: wrap;
+    margin: 15px;
 }  
 .cupe{   
     background-color: whitesmoke;
@@ -21,4 +22,15 @@ h1{
 
 .black{
     background-color: black
+}
+.settings{
+    display: flex;
+    margin: 10px;
+    flex-flow: column wrap;
+}
+button{
+    margin: 5px;
+    padding: 10px;
+    background-color: aliceblue;
+    color: black;
 }
