@@ -1,5 +1,8 @@
 const range = document.querySelector('#grid').value;
 const main = document.querySelector('main');
+const reset = document.querySelector('.reset');
+const eraser = document.querySelector('.eraser');
+const color = document.querySelector('.color');
 const N = range;
 let wide = 330 / N;
 const container = document.createElement('div')
@@ -14,15 +17,27 @@ for (let i = 0; i < N; i++) {
         let cupe = document.createElement("div")
         cupe.classList.add("cupe");
         cupe.style.width = `${wide}px`;
-        cupe.style.height = `${wide}px`;
-        
+        cupe.style.height = `${wide}px`;    
         container.appendChild(cupe)
-        cupe.addEventListener('mouseover', e => {
+        eraser.addEventListener('click', () => {
+            cupe.addEventListener('mouseover', e => {
+                if(mouseDown)
+                {
+                    cupe.classList.remove('black')
+                }
+                
+            })
+        });
+        color.addEventListener('click', () => {
+            cupe.addEventListener('mouseover', e => {
             if(mouseDown)
             {
                 cupe.classList.add('black')
             }
-            
-        })
+        
+            });
+        });
     }
 }
+reset.addEventListener('click', e => {window.location.reload()});
+
